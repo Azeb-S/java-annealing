@@ -36,11 +36,29 @@ public class ProblemSolving {
    * @return the maximum length of a word in the set
    */
   public static int maxLength(Set<String> words) {
-    return 0;
+
+    //  if (words.isEmpty()) {
+    //   //return Integer.MAX_VALUE;
+    // }else{
+    //   return 0;
+    // }
+    int max = 0;
+    for (String word : words) {
+      // System.out.println(word);
+      int length = word.length();
+      if (length <= max) {
+        max = 0;
+
+      }
+      else if (length > max) {
+        max++;
+      }
+    }
+    return max;
+    
   }
 
-
- /**
+  /**
    * Returns the length of the shortest word in the set.
    * 
    * Edge case: if set is empty, return Integer.MAX_VALUE
@@ -50,31 +68,27 @@ public class ProblemSolving {
    */
   public static int minLength(Set<String> words) {
     return Integer.MAX_VALUE;
-    //pseudo code
-    //word = [];
+    // pseudo code
+    // word = [];
 
-    //tolowercase
-    //.lenght
+    // tolowercase
+    // .lenght
     // for each / for loop --> .lenght
-//int min = 0;
+    // int min = 0;
 
-if ( words.isEmpty()) {
-  return Integer.MAX_VALUE;
-}
-  int min = Integer.MAX_VALUE;
+    if (words.isEmpty()) {
+      return Integer.MAX_VALUE;
+    }
+    int min = Integer.MAX_VALUE;
     for (String word : words) {
-      //System.out.println(word);
+      // System.out.println(word);
       int length = word.length();
-      if (length < min ) {
+      if (length < min) {
         min = length;
       }
-    } 
-    return min; 
+    }
+    return min;
   }
-      
-    
-        
 
-        
-  }
+}
 }

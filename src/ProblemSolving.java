@@ -39,6 +39,7 @@ public class ProblemSolving {
     return 0;
   }
 
+
  /**
    * Returns the length of the shortest word in the set.
    * 
@@ -49,5 +50,31 @@ public class ProblemSolving {
    */
   public static int minLength(Set<String> words) {
     return Integer.MAX_VALUE;
+    //pseudo code
+    //word = [];
+
+    //tolowercase
+    //.lenght
+    // for each / for loop --> .lenght
+//int min = 0;
+
+if ( words.isEmpty()) {
+  return Integer.MAX_VALUE;
+}
+  int min = Integer.MAX_VALUE;
+    for (String word : words) {
+      //System.out.println(word);
+      int length = word.length();
+      if (length < min ) {
+        min = length;
+      }
+    } 
+    return min; 
+  }
+      
+    
+        
+
+        
   }
 }

@@ -12,6 +12,15 @@ public class ProblemSolving {
    * @return true if every word starts with A (case-insensitive), false otherwise.
    */
   public static boolean allStartWithA(Set<String> words) {
+    
+    for(String word : words){
+
+      if (words.isEmpty() && word.startsWith("a")) {
+        return true;
+        
+      }
+
+    }
     return false;
   }
 
@@ -37,21 +46,19 @@ public class ProblemSolving {
    */
   public static int maxLength(Set<String> words) {
 
-    //  if (words.isEmpty()) {
-    //   //return Integer.MAX_VALUE;
-    // }else{
-    //   return 0;
-    // }
+      if (words.isEmpty()) {
+  return 0;
+    }
+
     int max = 0;
+
     for (String word : words) {
       // System.out.println(word);
       int length = word.length();
-      if (length <= max) {
-        max = 0;
+      if (length > max) {
+        max = length;
 
-      }
-      else if (length > max) {
-        max++;
+      
       }
     }
     return max;

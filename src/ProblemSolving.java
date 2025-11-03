@@ -36,8 +36,27 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
-    return false;
-  }
+    
+    
+        //check if there's empty string
+    if (words.isEmpty()) {
+      return false;
+    }
+    //String newWords = ""; --> not applicable for this
+
+    //for loop in the words --> was thinking of using.contains (wasnt sure)
+    // or .equals
+    for ( String word : words) {
+      if (word.equals("") ) {
+        return true;
+      } 
+      }
+      //if none is empty, return false
+      return false;
+    }
+
+
+  
 
   /**
    * Returns the length of the longest word in the set.

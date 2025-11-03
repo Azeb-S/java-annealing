@@ -146,4 +146,54 @@ public class ProblemSolvingTest {
   // Use your creativity here, and consider looking back at the maxLength
   // tests for inspiration
 
+
+    @Test
+    void testHasEmptyString_withEmptyString() {
+        // Arrange
+        Set<String> input = Set.of("hello", "", "world");
+
+        // Act
+        boolean actual = ProblemSolving.hasEmptyString(input);
+
+        // Assert
+        assertEquals(true, actual);
+    }
+
+    @Test
+    void testHasEmptyString_noEmptyStrings() {
+        // Arrange
+        Set<String> input = Set.of("apple", "banana");
+
+        // Act
+        boolean actual = ProblemSolving.hasEmptyString(input);
+
+        // Assert
+        assertEquals(false, actual);
+    }
+
+   
+
+    @Test
+    void testHasEmptyString_onlyEmptyStrings() {
+        // Arrange
+    Set<String> input = Set.of("");
+
+
+        // Act
+        boolean actual = ProblemSolving.hasEmptyString(input);
+
+        // Assert
+        assertEquals(true, actual);
+    }
+
+    @Test
+    void testHasEmptyString_mixedSpacesAndWords() {
+        // Arrange
+        Set<String> input = Set.of(" ", "word", "");
+        // Act
+        boolean actual = ProblemSolving.hasEmptyString(input);
+
+        // Assert
+        assertEquals(true, actual);
+    }
 }
